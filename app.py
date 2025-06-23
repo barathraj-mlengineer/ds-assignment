@@ -39,7 +39,7 @@ sns.barplot(data=avg_pnl, x='Sentiment', y='closed_pnl', palette='coolwarm', ax=
 ax1.set_title("Average Trader Profit & Loss by Market Sentiment")
 ax1.set_ylabel("Average PnL")
 ax1.grid(True)
-fig1.tight_layout(pad=0.3)
+fig1.tight_layout(pad=0.5)
 st.pyplot(fig1)
 
 #Outcome Distribution
@@ -49,7 +49,7 @@ sns.countplot(data=merged_df, x='Sentiment', hue='ProfitOrLoss', palette='Set2',
 ax2.set_title("Trade Outcomes (Profit vs Loss) by Sentiment")
 ax2.set_ylabel("Number of Trades")
 ax2.grid(True)
-fig2.tight_layout(pad=0.3)
+fig2.tight_layout(pad=0.5)
 st.pyplot(fig2)
 
 #Average Leverage
@@ -61,7 +61,7 @@ if 'leverage' in merged_df.columns:
     ax3.set_title("Average Leverage Used in Different Market Sentiments")
     ax3.set_ylabel("Average Leverage")
     ax3.grid(True)
-    fig3.tight_layout(pad=0.3)
+    fig3.tight_layout(pad=0.5)
     st.pyplot(fig3)
 
 #Symbol-wise Performance
