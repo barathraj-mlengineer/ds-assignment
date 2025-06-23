@@ -16,7 +16,7 @@ sentiment_df['Date'] = pd.to_datetime(sentiment_df['Date'])
 sentiment_df['Sentiment'] = sentiment_df['Sentiment'].str.upper()
 
 #Load Trader Data directly
-trader_df = pd.read_csv("historical_data.csv")
+trader_df = pd.read_csv("historical_data_reduced.csv")
 trader_df.columns = trader_df.columns.str.strip().str.lower().str.replace(" ", "_")
 trader_df.rename(columns={'coin': 'symbol'}, inplace=True)  # Adjust for naming consistency
 trader_df['timestamp'] = pd.to_datetime(trader_df['timestamp_ist'], format="%d-%m-%Y %H:%M")
